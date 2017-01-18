@@ -1,0 +1,19 @@
+name: Divider 
+description: Display an image centered which you can use as an divider.
+type: particle
+icon: fa-file-image-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable divider particles.
+      default: true
+
+   
+    image:
+      type: input.imagepicker
+      label: Image
+      description: Select desired logo image.
+
