@@ -1,0 +1,18 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+	    <section class="pf-divider {{ particle.dv }}">
+
+    {% set url = url(particle.url)|default(gantry.siteUrl()) %}
+    {% if (url == gantry.siteUrl()) %}{% set rel='rel=""' %}{% endif %}
+    {% set class=(particle.class ? 'class="'~ particle.class ~'"') %}
+
+
+    {% set image = url(particle.image) %}
+    {% if image %}
+    <img src="{{ url(particle.image) }}"   />
+    {% else %}
+    {{ particle.text|default('Divider') }}
+    {% endif %}
+</a>
+{% endblock %}
